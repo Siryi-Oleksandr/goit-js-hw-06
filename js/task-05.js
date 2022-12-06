@@ -4,9 +4,9 @@ const inputEl = document.querySelector("#name-input");
 inputEl.addEventListener("input", onInputChange);
 
 function onInputChange(event) {
-	const nameValue = event.currentTarget.value;
+	const nameValue = event.currentTarget.value.trim();
 
-	if (nameValue == 0) {
+	if (nameValue === "") {
 		nameLabel.textContent = "Anonymous";
 	} else {
 		nameLabel.textContent = nameValue;

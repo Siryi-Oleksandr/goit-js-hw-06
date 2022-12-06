@@ -9,7 +9,9 @@ function onInputBlur(event) {
 
 	if (isEmpty || currentNumberCharacters !== numberOfCharacters) {
 		inputEl.classList.add("invalid");
+		inputEl.classList.remove("valid");
 	} else {
 		inputEl.classList.add("valid");
+		inputEl.classList.remove("invalid");
 	}
 }
